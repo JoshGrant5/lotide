@@ -3,13 +3,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🤬🤬🤬 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const head = items => {
-  if (items[0]) {
-    return items[0];
-  } else {
-    return undefined;
-  }
-}
+const head = items => items[0];
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
