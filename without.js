@@ -1,11 +1,13 @@
 const eqArrays = (array1, array2) => {
-  let equal = true;
+  if (array1.length !== array2.length) {
+    return false;
+  }
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i] || array1.length !== array2.length) {
-      equal = false;
+    if (array1[i] !== array2[i]) {
+      return false;
     }
   }
-  return (equal ? true : false);
+  return true;
 };
 
 const assertArraysEqual = (array1, array2) => {
@@ -14,16 +16,11 @@ const assertArraysEqual = (array1, array2) => {
 };
 
 // Return a new array with specified item removed
+// array.includes()
 const without = (source, itemsToRemove) => {
   let newArray = [];
-  for (let item of source) {
-    let match = false;
-    for (let removedItem of itemsToRemove) {
-      if (item === removedItem) {
-        match = true;
-      }
-    }
-    if (!match) {
+  for (let item of source) { 
+    if (!itemsToRemove.includes(item)) {
       newArray.push(item);
     }
   }
