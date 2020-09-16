@@ -11,8 +11,9 @@ const eqArrays = (array1, array2) => {
 };
  
 const assertArraysEqual = (array1, array2) => {
-  eqArrays(array1, array2) ? console.log(`😊😊😊 Assertion Passed: ${array1} === ${array2}`) :
-    console.log(`🤬🤬🤬 Assertion Failed: ${array1} !== ${array2}`);
+  const inspect = require('util').inspect; // allows us to view the arrays in our console.log
+  eqArrays(array1, array2) ? console.log(`😊😊😊 Assertion Passed: ${inspect(array1)} === ${inspect(array2)}`) :
+    console.log(`🤬🤬🤬 Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
 };
 
 // Return array of the middle most element, or elements if array is even number in length
