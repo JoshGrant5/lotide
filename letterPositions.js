@@ -16,7 +16,7 @@ const assertArraysEqual = (array1, array2) => {
 };
 
 // Returns an object of all the indices in the string where each character is found
-const letterPositions = function(sentence) {
+const letterPositions = sentence => {
   const results = {};
   let lowerCased = sentence.toLowerCase();
   for (let i = 0; i < lowerCased.length; i++) {
