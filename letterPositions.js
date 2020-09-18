@@ -1,20 +1,6 @@
-const eqArrays = (array1, array2) => {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
  
-const assertArraysEqual = (array1, array2) => {
-  const inspect = require('util').inspect; // allows us to view the arrays in our console.log
-  eqArrays(array1, array2) ? console.log(`😊😊😊 Assertion Passed: ${inspect(array1)} === ${inspect(array2)}`) :
-    console.log(`🤬🤬🤬 Assertion Failed: ${inspect(array1)} !== ${inspect(array2)}`);
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 // Returns an object of all the indices in the string where each character is found
 const letterPositions = sentence => {
@@ -32,19 +18,21 @@ const letterPositions = sentence => {
   return results;
 };
 
+module.exports = letterPositions;
+
 // Test code
-console.log(letterPositions('hello'));
-assertArraysEqual(letterPositions('hello').l, [2, 3]);
-console.log(letterPositions('lighthouse in the house'));
-assertArraysEqual(letterPositions('lighthouse in the house'), {
-  l: [0],
-  i: [1, 11],
-  g: [2],
-  h: [3, 5, 15, 18],
-  t: [4, 14],
-  o: [6, 19],
-  u: [7, 20],
-  s: [8, 21],
-  e: [9, 16, 22],
-  n: [12]
-});
+// console.log(letterPositions('hello'));
+// assertArraysEqual(letterPositions('hello').l, [2, 3]);
+// console.log(letterPositions('lighthouse in the house'));
+// assertArraysEqual(letterPositions('lighthouse in the house'), {
+//   l: [0],
+//   i: [1, 11],
+//   g: [2],
+//   h: [3, 5, 15, 18],
+//   t: [4, 14],
+//   o: [6, 19],
+//   u: [7, 20],
+//   s: [8, 21],
+//   e: [9, 16, 22],
+//   n: [12]
+// });
