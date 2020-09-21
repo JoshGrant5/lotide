@@ -1,5 +1,4 @@
 const eqArrays = require('./eqArrays');
- 
 const assertArraysEqual = require('./assertArraysEqual');
 
 /* Function will keep collecting items from a provided array until the callback provided returns a truthy value

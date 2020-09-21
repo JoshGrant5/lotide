@@ -1,3 +1,4 @@
+// Use for function overwridden by implementation of mocha and chai
 const assertArraysEqual = require('../assertArraysEqual');
 
 // Test code

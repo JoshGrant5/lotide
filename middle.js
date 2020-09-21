@@ -1,5 +1,4 @@
 const eqArrays = require('./eqArrays');
- 
 const assertArraysEqual = require('./assertArraysEqual');
 
 // Return array of the middle most element, or elements if array is even number in length

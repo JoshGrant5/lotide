@@ -10,5 +10,3 @@ describe("#tail", () => {
     assert.strictEqual(result.length, 2); 
   });
 });
-
-// Chai gives us assert.deepEqual, because assert.strictEqual simply uses === to compare values, which will not work for comparing objects and arrays.

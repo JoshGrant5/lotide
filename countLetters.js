@@ -17,6 +17,6 @@ const countLetters = sentence => {
 
 module.exports = countLetters;
 
-// // Test code
+// Test code
 // console.log(countLetters('josh'));
 // console.log(countLetters('longer than josh'));
